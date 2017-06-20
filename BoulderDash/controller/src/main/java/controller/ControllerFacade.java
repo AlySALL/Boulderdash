@@ -58,20 +58,21 @@ public class ControllerFacade implements IController {
 		
 	}
     public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+        //this.getView().displayMessage(this.getModel().getExampleById(1).toString());
 
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
+        this.getView().displayMessage(this.getModel().getLevel1().toString());
 
-        final List<Example> examples = this.getModel().getAllExamples();
+        final List<Example> examples = this.getModel().getLevel1();
         final StringBuilder message = new StringBuilder();
         // a.append(" bar);
-        for (final Example example : examples) {
-            message.append(example);
+        for (final Example level1 : examples) {
+            message.append(level1);
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
     }
 
+   
     /**
      * Gets the view.
      *
@@ -89,4 +90,6 @@ public class ControllerFacade implements IController {
     public IModel getModel() {
         return this.model;
     }
+    
+	
 }
