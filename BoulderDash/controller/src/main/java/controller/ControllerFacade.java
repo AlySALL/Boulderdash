@@ -85,7 +85,7 @@ public class ControllerFacade implements IController {
     /**
      * Gets the model.
      *
-     * @return the model
+     * @return the model	
      */
     public IModel getModel() {
         return this.model;

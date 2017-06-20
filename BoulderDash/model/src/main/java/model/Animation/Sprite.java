@@ -13,6 +13,7 @@ public class Sprite {
 
 	private String srcImage;
 	private BufferedImage sprite;
+	public static final int SIZE_CASE = 16;
 
 	public Sprite(String src) {
 		this.setSrcImage(src);
@@ -54,7 +55,7 @@ public class Sprite {
 			sprite = loadSprite(this.srcImage);
 		}
 
-		return sprite.getSubimage(xGrid * 16, yGrid * 16, 16,16);
+		return sprite.getSubimage(xGrid *SIZE_CASE, yGrid * SIZE_CASE, SIZE_CASE,SIZE_CASE);
 	}
 }
 

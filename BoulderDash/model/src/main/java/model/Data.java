@@ -22,7 +22,7 @@ public class Data {
 	public static final int DELAI_IDLE = 10;
 
 	public static final int PAS_MVT = SIZE_CASE / CYCLES;
-	public static final int SPEED_ANIM = 1;
+	
 	public static final int SPEED_PERSO = 1;
 	public static final int SPEED_IDLE = 8;
 
