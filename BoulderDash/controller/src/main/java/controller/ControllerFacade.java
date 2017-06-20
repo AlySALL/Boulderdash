@@ -3,6 +3,8 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.swing.JButton;
+
 import model.Example;
 import model.IModel;
 import view.IView;
@@ -20,6 +22,11 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
+    
+    JButton button1;
+    JButton button2;
+    JButton button3;
+    JButton button4;
 
     /**
      * Instantiates a new controller facade.
@@ -37,10 +44,19 @@ public class ControllerFacade implements IController {
 
     /**
      * Start.
+     * @return 
      *
      * @throws SQLException
      *             the SQL exception
      */
+    public void GestionBoutonEditeur(JButton b1, JButton b2, JButton b3, JButton b4) {
+
+		this.button1 = b1;
+		this.button2 = b2;
+		this.button3 = b3;
+		this.button4 = b4;
+		
+	}
     public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getExampleById(1).toString());
 
