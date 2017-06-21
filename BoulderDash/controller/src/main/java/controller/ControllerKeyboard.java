@@ -37,7 +37,7 @@ public class ControllerKeyboard {
 
 		switch (event.KeyPressed) {
 		case KEY_UP:
-			this.player.y_step=-1; //on se déplace vers le haut
+			player.y_step=-1; //on se déplace vers le haut
 			break;
 		case KEY_DOWN:
 			player.y_step=+1; //on se déplace vers le bas
@@ -50,6 +50,26 @@ public class ControllerKeyboard {
 			break;
 		}
 	}
+	
+	public void KeyReleased (KeyEvent e) {
+		Player player;
+
+		switch (event.KeyPressed) {
+		case KEY_UP:
+			player.y_step=0; 
+			break;
+		case KEY_DOWN:
+			player.y_step=0; 
+			break;
+		case KEY_LEFT:
+			player.x_step=0; 
+			break;
+		case KEY_RIGHT:
+			player.x_step=0; 
+			break;
+		}
+	}
+	
 
 
 
