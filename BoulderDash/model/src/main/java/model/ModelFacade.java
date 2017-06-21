@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.logging.Level;
 
 /**
  * 
@@ -10,7 +11,13 @@ import java.util.List;
 public class ModelFacade implements IModel {
 
 	@Override
-	public List<Example> getLevel1() {
+	public List<Level> getLevel1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Level> getLevel1(String string) {
 		// TODO Auto-generated method stub
 		return null;
 	}

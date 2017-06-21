@@ -1,17 +1,23 @@
 package model.Animation;
 
+/**
+ * Creation of all possible animations of sprite
+ * @author ALY
+ *
+ */
 public enum ChoiceAnimation {
+	
 	Butterfly,
-	Personnage_Walk_Right,
-	Personnage_Marche_Left,
-	Personnage_Marche_Up,
-	Personnage_Marche_Down,
-	Personnage_Debout_Right,
-	Personnage_Debout_Left,
-	Personnage_Debout_Up,
-	Personnage_Debout_Down,
-	Personnage_Idle,
-	Personnage_Dead,
+	Player_Walk_Right,
+	Player_walk_Left,
+	Player_Walk_Up,
+	Player_Walk_Down,
+	Player_Standing_Right,
+	Player_Standing_Left,
+	Player_Standing_Up,
+	Player_Standing_Down,
+	Player_Idle,
+	Player_Dead,
 	Mud,
 	Diamond,
 	Rock,

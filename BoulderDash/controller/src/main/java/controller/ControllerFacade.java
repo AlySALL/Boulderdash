@@ -2,18 +2,17 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
 
 import javax.swing.JButton;
 
-import model.Example;
 import model.IModel;
 import view.IView;
 
 /**
- * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
+ * 
+ * @author ALY
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
  */
 public class ControllerFacade implements IController {
 
@@ -59,11 +58,12 @@ public class ControllerFacade implements IController {
 	}
     public void start() throws SQLException {
        
-        final List<Example> examples = this.getModel().getLevel1();
+        final List<Level> levels = this.getModel().getLevel1(",");
         final StringBuilder message = new StringBuilder();
-        for (final Example level1 : examples) {
-            message.append(level1);
-            message.append('\n');
+        for (Level level : levels) {
+        	message.append(level);
+        	message.append('\n');
+		
         }
         this.getView().displayMessage(message.toString());
     }
@@ -87,5 +87,4 @@ public class ControllerFacade implements IController {
         return this.model;
     }
     
-	
 }
