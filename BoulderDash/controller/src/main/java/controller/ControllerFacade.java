@@ -2,17 +2,16 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
 
-import javax.swing.JButton;
-
+import model.Example;
 import model.IModel;
 import view.IView;
 
 /**
- * 
- * @author ALY
+ * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
  *
+ * @author Jean-Aymeric DIET jadiet@cesi.fr
+ * @version 1.0
  */
 public class ControllerFacade implements IController {
 
@@ -21,11 +20,6 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
-    
-    JButton button1;
-    JButton button2;
-    JButton button3;
-    JButton button4;
 
     /**
      * Instantiates a new controller facade.
@@ -43,40 +37,21 @@ public class ControllerFacade implements IController {
 
     /**
      * Start.
-     * @return 
      *
      * @throws SQLException
      *             the SQL exception
      */
-    public void GestionBoutonEditeur(JButton b1, JButton b2, JButton b3, JButton b4) {
-
-		this.button1 = b1;
-		this.button2 = b2;
-		this.button3 = b3;
-		this.button4 = b4;
-		
-	}
     public void start() throws SQLException {
-<<<<<<< HEAD
-       
-        final List<Level> levels = this.getModel().getLevel1(",");
-=======
-        //this.getView().displayMessage(this.getModel().getExampleById(1).toString());
-    	view.
-        this.getView().displayMessage(this.getModel().getLevel1().toString());
-
-        final List<Example> examples = this.getModel().getLevel1();
->>>>>>> origin/master
+      
         final StringBuilder message = new StringBuilder();
-        for (Level level : levels) {
-        	message.append(level);
-        	message.append('\n');
-		
+        // a.append(" bar);
+        for (final Example example : examples) {
+            message.append(example);
+            message.append('\n');
         }
         this.getView().displayMessage(message.toString());
     }
 
-  
     /**
      * Gets the view.
      *
@@ -89,10 +64,9 @@ public class ControllerFacade implements IController {
     /**
      * Gets the model.
      *
-     * @return the model	
+     * @return the model
      */
     public IModel getModel() {
         return this.model;
     }
-    
 }
