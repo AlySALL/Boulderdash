@@ -1,23 +1,38 @@
-package view;
+package view.game;
 
+import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class ScoreView extends JPanel{
-	private int score;
-	private int time;
-	private int NbDiamond;
+public class InfosArea extends JPanel{
+	private JLabel score;
+	private JLabel time;
+	private JLabel NbDiamond;
 	
-	public ScoreView(int score, int time, int NbDiamond){
-		JPanel Infos = new JPanel();
-		JLabel Lscore= new JLabel( "Score : " + score);
-		JLabel Ltime = new JLabel(" Time : " + time);
-		JLabel LNbDiamond = new JLabel (" Diamond: " + NbDiamond);
-		
-		Infos.add(Lscore);
-		Infos.add(Ltime);
-		Infos.add(LNbDiamond);
+	public InfosArea(){
+		InitInfoZone();
+	
+	}
+	private void InitInfoZone(){
+		NbDiamond = new JLabel("Remaing Diamonds: " );
+		time = new JLabel("Remaing Time: ");
+		score = new JLabel("Score: ");
+	this.add(NbDiamond);
+	this.add(time);
+	this.add(score);
+	this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+
 	}
 	
+	public JLabel GetNbDiamond(){
+		return NbDiamond;
+	}
+	public JLabel GetTime(){
+		return time;
+	}
+	
+	public JLabel GetScore(){
+		return score;
+	}
 
 }

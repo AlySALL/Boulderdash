@@ -1,4 +1,4 @@
-package view;
+package view.level;
 
 import java.awt.event.KeyEvent;
 import javax.swing.ButtonGroup;
