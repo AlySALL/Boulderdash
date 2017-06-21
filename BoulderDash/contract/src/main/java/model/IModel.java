@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.logging.Level;
 
 /**
  * 
@@ -9,6 +10,8 @@ import java.util.List;
  */
 public interface IModel {
 
-	List<Example> getLevel1();
+	List<Level> getLevel1();
+
+	List<Level> getLevel1(String string);
 
 }

@@ -4,8 +4,6 @@ import java.awt.Window;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.swing.JButton;
-
 import model.Example;
 import model.IModel;
 import view.IView;
@@ -26,7 +24,10 @@ public class ControllerFacade implements IController{
 
     /** The model. */
     private final IModel model;
+<<<<<<< HEAD
     
+=======
+>>>>>>> e4fa2bee2fa3fd558338a7eb4369812b93fdc841
 
     /**
      * Instantiates a new controller facade.
@@ -45,27 +46,36 @@ public class ControllerFacade implements IController{
     }
 
     /**
+<<<<<<< HEAD
      * Start
      * @return 
+=======
+     * Start.
+>>>>>>> e4fa2bee2fa3fd558338a7eb4369812b93fdc841
      *
      * @throws SQLException
      *             the SQL exception
      */
+<<<<<<< HEAD
 		
 	
     public void start() throws SQLException {
     			window.InitView();
     			}
         /*final StringBuilder message = new StringBuilder();
+=======
+    public void start() throws SQLException {
+      
+        final StringBuilder message = new StringBuilder();
+>>>>>>> e4fa2bee2fa3fd558338a7eb4369812b93fdc841
         // a.append(" bar);
-        for (final Example level1 : examples) {
-            message.append(level1);
+        for (final Example example : examples) {
+            message.append(example);
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
     }*/
 
-   
     /**
      * Gets the view.
      *
@@ -78,11 +88,9 @@ public class ControllerFacade implements IController{
     /**
      * Gets the model.
      *
-     * @return the model	
+     * @return the model
      */
     public IModel getModel() {
         return this.model;
     }
-    
-	
 }

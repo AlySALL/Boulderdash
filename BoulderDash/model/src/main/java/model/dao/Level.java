@@ -1,8 +1,8 @@
 package model.dao;
 
-public class Personnage extends Case{
+public class Level extends Case {
 
-	public Personnage(int x, int y) {
+	public Level(int x, int y) {
 		super(x, y);
 		// TODO Auto-generated constructor stub
 	}

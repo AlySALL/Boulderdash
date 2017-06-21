@@ -4,7 +4,7 @@ public enum States {
 	WalkUp,
 	WalkDown,
 	WalkLeft,
-	MarcheRight,
+	WalkRight,
 	StopUp,
 	StopDown,
 	StopLeft,
