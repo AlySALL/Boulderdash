@@ -57,8 +57,16 @@ public class ControllerFacade implements IController {
 		
 	}
     public void start() throws SQLException {
+<<<<<<< HEAD
        
         final List<Level> levels = this.getModel().getLevel1(",");
+=======
+        //this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+    	view.
+        this.getView().displayMessage(this.getModel().getLevel1().toString());
+
+        final List<Example> examples = this.getModel().getLevel1();
+>>>>>>> origin/master
         final StringBuilder message = new StringBuilder();
         for (Level level : levels) {
         	message.append(level);
