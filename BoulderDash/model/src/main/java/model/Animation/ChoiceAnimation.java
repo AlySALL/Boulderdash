@@ -2,7 +2,7 @@ package model.Animation;
 
 public enum ChoiceAnimation {
 	Butterfly,
-	Personnage_Walk_Rigth,
+	Personnage_Walk_Right,
 	Personnage_Marche_Left,
 	Personnage_Marche_Up,
 	Personnage_Marche_Down,
