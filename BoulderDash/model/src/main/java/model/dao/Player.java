@@ -1,5 +1,6 @@
 package model.dao;
 
+import model.Animation.Animation;
 import model.Animation.ChoiceAnimation;
 
 public class Player extends Case{
@@ -7,7 +8,7 @@ public class Player extends Case{
 	 * offset:Allows the Player to move along x and y
 	 */
 	private int offsetx, offsety;
-	public Directions move, lastDir;
+	public Directions Move, lastDir;
 	public ChoiceAnimation animation;
 	boolean  playerAlive;
 	
@@ -19,9 +20,8 @@ public class Player extends Case{
 		 */
 
 		this.playerAlive = true;
-		this.move = Directions.Null;
+		this.Move = Directions.Null;
 		this.lastDir = Directions.Null;
-		this.animation = ChoiceAnimation.Player_Idle;
 		
 		
 		/**
@@ -51,6 +51,12 @@ public class Player extends Case{
 
 	public void setOffsety(int offsety) {
 		this.offsety = offsety;
+	}
+
+	@Override
+	public Animation getAnimation() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

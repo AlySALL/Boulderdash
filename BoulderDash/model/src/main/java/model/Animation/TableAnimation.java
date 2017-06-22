@@ -29,23 +29,64 @@ public class TableAnimation {
 	 * @return
 	 */
 	@SuppressWarnings("unused")
-	private static Animation getPersonnageWalkRight() {
+	private static Animation getPlayerWalkRight() {
 		if (tableAnimations.get(ChoiceAnimation.Player_Walk_Right).equals(null)) {
-			Sprite spritePersonnage = new Sprite("rockford");
-			BufferedImage[] walkingRight = { spritePersonnage.getSprite(1, 1),spritePersonnage.getSprite(2, 1) };
+			Sprite spritePlayer = new Sprite("rockford");
+			BufferedImage[] walkingRight = { spritePlayer.getSprite(1, 1),spritePlayer.getSprite(2, 1) };
 			tableAnimations.put(ChoiceAnimation.Player_Walk_Right,new Animation(walkingRight, SPEED_ANIM));
 		}
+		tableAnimations.get(ChoiceAnimation.Player_Walk_Up).start();
 		return tableAnimations.get(ChoiceAnimation.Player_Walk_Right);
 
 	}
+	/**
+	 * create a object sprite player to walk and use the sprite "Rockford"
+	 * @return
+	 */
 	@SuppressWarnings("unused")
-	private static  Animation getPersonnageWalkLeft() {
+	private static  Animation getPlayerWalkLeft() {
 		if (tableAnimations.get(ChoiceAnimation.Player_walk_Left).equals(null)) {
-			Sprite spritePersonnage = new Sprite("rockford");
-			BufferedImage[] walkingLeft = { spritePersonnage.getSprite(1, 0),spritePersonnage.getSprite(2, 0) };
+			Sprite spritePlayer = new Sprite("rockford");
+			BufferedImage[] walkingLeft = { spritePlayer.getSprite(1, 0),spritePlayer.getSprite(2, 0) };
 			tableAnimations.put(ChoiceAnimation.Player_walk_Left,new Animation(walkingLeft, SPEED_ANIM));
 		}
 		tableAnimations.get(ChoiceAnimation.Player_walk_Left).start();
-		return tableAnimations.get(ChoiceAnimation.Player_Walk_Right);
+		return tableAnimations.get(ChoiceAnimation.Player_walk_Left);
 	}
-}
+	/**
+	 * 
+	 * @return
+	 */
+	@SuppressWarnings("unused")
+	private static Animation getPlayerWalkUp(){ if(tableAnimations.get(ChoiceAnimation.Player_Walk_Up).equals(null)){
+		Sprite spritePlayer = new Sprite("rockford");
+		BufferedImage[] walkingUp ={ spritePlayer.getSprite(1,2),spritePlayer.getSprite(1,3)};
+		tableAnimations.put(ChoiceAnimation.Player_Walk_Up,new Animation(walkingUp, SPEED_ANIM));
+		
+	}
+	tableAnimations.get(ChoiceAnimation.Player_Walk_Up).start();
+	return tableAnimations.get(ChoiceAnimation.Player_Walk_Up);
+	
+	}
+	public static Animation getWall() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static Animation getCaseNull() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static Animation getDiamond() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static Animation getRock() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static Animation getButterFly() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	}
