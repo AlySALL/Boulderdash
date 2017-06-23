@@ -39,7 +39,7 @@ public class ControllerFacade implements IController {
 	}
 	
 	public void update(){
-	view.update();
+	view.update(model);
 	}
 	
 
